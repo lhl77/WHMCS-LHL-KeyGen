@@ -7,7 +7,7 @@ WHMCS 产品授权密钥（License Key）自动生成模块，支持两种加密
 | **HMAC-SHA256 with Salt** | 对称密钥 | 35 字符 | 盐值泄露 = 可伪造 |
 | **ECC P-256 ECDSA** | 非对称密钥 | **88 字符** | 公钥泄露也无法伪造 |
 
-# 增值版支持 Lite 轻量密钥、自定义密钥算法，购买链接：https://shop.lhl.one/store/whmcs-plugins/lhl-app-gen
+## 增值版支持 Lite 轻量密钥、自定义密钥算法，购买链接：https://shop.lhl.one/store/whmcs-plugins/lhl-app-gen
 ---
 
 ## 快速开始
