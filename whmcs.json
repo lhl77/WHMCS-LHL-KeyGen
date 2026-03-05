@@ -1,0 +1,21 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-servers",
+  "name": "lhlappGen",
+  "license": "proprietary",
+  "category": "provisioning",
+  "description": {
+    "name": "LHL's App Gen",
+    "tagline": "LHL's App Gen - Connect to LHL App via WHMCS and generate license keys."
+  },
+  "support": {
+    "homepage": "https:\/\/blog.lhl.one\/",
+    "support_url": "https:\/\/shop.lhl.one\/"
+  },
+  "authors": [
+    {
+      "name": "LHL",
+      "homepage": "https:\/\/blog.lhl.one\/"
+    }
+  ]
+}

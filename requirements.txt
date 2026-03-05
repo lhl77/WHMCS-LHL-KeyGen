@@ -1,0 +1,2 @@
+# RSA 方案需要 cryptography；HMAC 方案无额外依赖
+cryptography>=41.0
