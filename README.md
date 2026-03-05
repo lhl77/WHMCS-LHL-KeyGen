@@ -1,4 +1,4 @@
-# LHL's App Gen — WHMCS License 模块
+# WHMCS License 模块 （纯本地验证）
 
 WHMCS 产品授权密钥（License Key）自动生成模块，支持两种加密方案：
 
@@ -11,14 +11,14 @@ WHMCS 产品授权密钥（License Key）自动生成模块，支持两种加密
 
 ## 快速开始
 
-### 1. HMAC-SHA256 方案（原有）
+### 1. HMAC-SHA256 方案
 
 ```bash
 # 使用内置盐值
-python keygen.py hmac MyImageBot
+python keygen.py hmac <input>
 
 # 使用自定义盐值
-python keygen.py hmac MyImageBot --salt "my-custom-salt"
+python keygen.py hmac <input> --salt "my-custom-salt"
 ```
 
 输出：
@@ -34,10 +34,10 @@ python keygen.py ecc-gen                    # 输出到当前目录
 python keygen.py ecc-gen -o ./keys          # 指定输出目录
 
 # 第二步：用私钥签名生成 License
-python keygen.py ecc-sign MyImageBot --key private.pem
+python keygen.py ecc-sign <input> --key private.pem
 
 # 第三步：用公钥验证 License（可选）
-python keygen.py ecc-verify MyImageBot --key public.pem --license "base64..."
+python keygen.py ecc-verify <input> --key public.pem --license "base64..."
 ```
 
 输出：
@@ -51,7 +51,7 @@ License Key: EeAz1+aOE6kzWeTALqx38SWwwO6KU1JUiBGHtiL4xJRRJXs8HbRloXa+NQk/MWlvwHg
 | 文件 | 放在哪 | 说明 |
 |------|--------|------|
 | `private.pem` | WHMCS 服务器 / 开发者本地 | ⚠️ **绝对保密**，用于签发 License |
-| `public.pem` | 客户端应用（bot / 程序）内 | 可公开，仅用于验证签名 |
+| `public.pem` | 客户端应用（程序）内 | 可公开，仅用于验证签名 |
 
 ---
 
@@ -68,7 +68,7 @@ License Key: EeAz1+aOE6kzWeTALqx38SWwwO6KU1JUiBGHtiL4xJRRJXs8HbRloXa+NQk/MWlvwHg
 | **APP下载地址** | 下载链接 |
 | **License 加密方案** | 下拉选 `hmac` 或 `ecc` |
 | **License Salt / ECC 私钥** | hmac 时填盐值字符串；ecc 时粘贴 `private.pem` 全文 |
-| **License 变量名** | 自定义字段名（如 `Bot Username`） |
+| **License 变量名** | 自定义字段名 |
 
 ---
 
